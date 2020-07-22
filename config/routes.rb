@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'homes/show'
   devise_for :users
 
-  resources :books
+  resources :books, only: [:index, :create, :show, :edit, :uptdate, :destroy]
   resources :users, only: [:show, :index, :edit, :update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
