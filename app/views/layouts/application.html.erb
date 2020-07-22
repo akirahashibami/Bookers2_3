@@ -15,21 +15,21 @@
         <nav class="nav navbar-nav navbar-left"><span>Bookers</span></nav>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</li>
-            <li><span class="glyphicon glyphicon-link" aria-hidden="true"></span>About</li>
-            <li><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>sign up</li>
-            <li><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>login</li>
+            <li><%= link_to "Home", "#", class: "glyphicon glyphicon-home" %></li>
+            <li><%= link_to "About", "#", class: "glyphicon glyphicon-link" %></li>
+            <li><%= link_to "sign up", "#", class: "glyphicon glyphicon-edit" %></li>
+            <li><%= link_to "login", "#", class: "glyphicon glyphicon-log-in" %></li>
 
-            <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</li>
-            <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Users</li>
-            <li><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Books</li>
-            <li><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>logout</li>
-          </ul>
+            <li><%= link_to "Home", "#", class: "glyphicon glyphicon-home" %></li>
+            <li><%= link_to "Users", "#", class: "glyphicon glyphicon-user" %></li>
+            <li><%= link_to "Books", "#", class: "glyphicon glyphicon-book" %></li>
+            <li><%= link_to "logout", "#", class: "glyphicon glyphicon-log-out" %></li>
         </nav>
       </div>
     </header>
 
     <div class="container">
+      <p id="notice"><%= notice %></p>
 
     <%= yield %>
 

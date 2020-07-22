@@ -27,14 +27,13 @@ header{
     padding-top: 10px;
   }
   .navbar-right{
-    color: #9d9d9d;
     line-height: 25px;
 
     li{
       padding: 15px 10px;
 
-      span{
-        padding-right: 5px;
+      a{
+          color: #9d9d9d;
       }
     }
   }
