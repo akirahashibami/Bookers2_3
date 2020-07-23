@@ -15,15 +15,17 @@
         <nav class="nav navbar-nav navbar-left"><span>Bookers</span></nav>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", "#", class: "glyphicon glyphicon-home" %></li>
-            <li><%= link_to "About", "#", class: "glyphicon glyphicon-link" %></li>
-            <li><%= link_to "sign up", "#", class: "glyphicon glyphicon-edit" %></li>
-            <li><%= link_to "login", "#", class: "glyphicon glyphicon-log-in" %></li>
-
+            <% if user_signed_in? %>
             <li><%= link_to "Home", "#", class: "glyphicon glyphicon-home" %></li>
             <li><%= link_to "Users", "#", class: "glyphicon glyphicon-user" %></li>
             <li><%= link_to "Books", "#", class: "glyphicon glyphicon-book" %></li>
-            <li><%= link_to "logout", "#", class: "glyphicon glyphicon-log-out" %></li>
+            <li><%= link_to "logout", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out" %></li>
+            <% else %>
+            <li><%= link_to "Home", root_path, class: "glyphicon glyphicon-home" %></li>
+            <li><%= link_to "About", "#", class: "glyphicon glyphicon-link" %></li>
+            <li><%= link_to "sign up", "#", class: "glyphicon glyphicon-edit" %></li>
+            <li><%= link_to "login", "#", class: "glyphicon glyphicon-log-in" %></li>
+            <% end %>
         </nav>
       </div>
     </header>
