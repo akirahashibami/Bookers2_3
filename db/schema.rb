@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_22_072856) do
+ActiveRecord::Schema.define(version: 2020_07_23_101955) do
 
   create_table "books", force: :cascade do |t|
     t.text "title"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_07_22_072856) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "name"
-    t.text "introsuction"
+    t.text "introduction"
     t.integer "profile_image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
