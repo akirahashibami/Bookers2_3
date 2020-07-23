@@ -11,6 +11,8 @@
               <td></td>
               <td> <%= @book_show.title %> </td>
               <td> <%= @book_show.body %></td>
+              <td> <%= link_to "Edit", edit_book_path(@book_show.id), class: "btn btn-success" %></td>
+              <td> <%= link_to "Destroy", book_path(@book_show.id), method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-danger" %></td>
             </tr>
           </tbody>
         </table>
