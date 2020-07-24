@@ -1,9 +1,12 @@
 <div class="col-xs-3">
   <h2>User info</h2>
-  <%=%>
   <table class="table">
     <tbody>
-      <tr></tr>
+      <tr>
+        <th>
+          <%= attachment_image_tag @user, :profile_image, size: '100x100', fallback: "no_image.jpg" %>
+        </th>
+      </tr>
       <tr>
         <th>name</th>
         <th><%= user.name %></th>
@@ -15,7 +18,7 @@
     </tbody>
   </table>
   <div class="row">
-    <%= link_to "", "#", class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
+    <%= link_to "", edit_user_path(user), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
   </div>
   <h2>New Book</h2>
   <%= form_for(book) do |f| %>

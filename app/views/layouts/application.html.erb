@@ -22,9 +22,9 @@
             <li><%= link_to "logout", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out" %></li>
             <% else %>
             <li><%= link_to "Home", root_path, class: "glyphicon glyphicon-home" %></li>
-            <li><%= link_to "About", "#", class: "glyphicon glyphicon-link" %></li>
-            <li><%= link_to "sign up", "#", class: "glyphicon glyphicon-edit" %></li>
-            <li><%= link_to "login", "#", class: "glyphicon glyphicon-log-in" %></li>
+            <li><%= link_to "About", homes_path, class: "glyphicon glyphicon-link" %></li>
+            <li><%= link_to "sign up", new_user_registration_path, class: "glyphicon glyphicon-edit" %></li>
+            <li><%= link_to "login", new_user_session_path, class: "glyphicon glyphicon-log-in" %></li>
             <% end %>
         </nav>
       </div>
