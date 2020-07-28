@@ -1,3 +1,10 @@
+<% if @user.errors.any? %>
+  <h3><%= @user.errors.count %>errors prohibited this obj from being saved:</h3>
+  <% @user.errors.full_messages.each do |message| %>
+   <li><%= message %></li>
+   <% end %>
+ <% end %>
+
 <div class="row">
   <h2>User info</h2>
     <%= form_for(@user) do |f| %>
@@ -5,13 +12,13 @@
       <p>Name<%= f.text_field :name %></p>
     </div>
     <div>
-      <p>Image</p>
+      <p>Image<%= f.attachment_field :profile_image %></p>
     </div>
     <div>
       <p>Introducttion<%= f.text_area :introduction %></p>
     </div>
     <div>
-      <%= f.submit "Uptate User", class: "btn btn-default" %>
+      <%= f.submit "Update User", class: "btn btn-default" %>
     </div>
     <% end %>
 </div>
