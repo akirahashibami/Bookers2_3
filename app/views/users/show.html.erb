@@ -1,0 +1,27 @@
+<div class="row">
+
+  <%= render 'books/info', book: @book %>
+
+  <div class="col-xs-9">
+    <h2>Books</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Title</th>
+          <th>Opinion</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @user_book.each do |book| %>
+        <tr>
+          <td><%=  %></td>
+          <td><%= link_to book.title, book_path(book.id) %></td>
+          <td><%= book.body %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

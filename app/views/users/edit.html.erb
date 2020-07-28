@@ -1,0 +1,17 @@
+<div class="row">
+  <h2>User info</h2>
+    <%= form_for(@user) do |f| %>
+    <div>
+      <p>Name<%= f.text_field :name %></p>
+    </div>
+    <div>
+      <p>Image</p>
+    </div>
+    <div>
+      <p>Introducttion<%= f.text_area :introduction %></p>
+    </div>
+    <div>
+      <%= f.submit "Uptate User", class: "btn btn-default" %>
+    </div>
+    <% end %>
+</div>

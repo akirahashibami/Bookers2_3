@@ -13,7 +13,27 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
- 
-  @import "bootstrap-sprockets";
-  @import "bootstrap";
+header{
+  color: white;
+  background-color: #222;
+
+  span{
+    font-size: 20px;
+    padding-top: 10px;
+  }
+
+  .navbar-right{
+    
+    a{
+      color: #9d9d9d;
+    }
+  }
+}
+
+body{
+  font-size: 14px;
+  line-height: 1.42857143;
+}
