@@ -6,8 +6,12 @@ Rails.application.routes.draw do
   get 'home/about' => 'homes#show', as: 'home'
 
   resources :homes, only: [:index]
-  resources :books, only: [:index, :create, :show, :edit, :update, :destroy]
+  resources :books, only: [:index, :create, :show, :edit, :update, :destroy] do
   # newのページは作らないので６つ
+    resources :post_comments, only: [:create, :destroy]
+    # bookに対してコメント機能をつける(親子関係(ネスト))
+  end
+
   resources :users, only: [:index, :show, :edit, :update]
 
 end
